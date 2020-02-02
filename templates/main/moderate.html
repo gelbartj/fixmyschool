@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+<style type="text/css">
+a.special:hover { text-decoration:none; }
+#bannerimage { display:none; }
+</style>
+<script language="javascript" src="/static/voting.js"></script>
+<script language="javascript" src="/static/moderate.js"></script>
+{% endblock %}
+{% block content %}
+{% if entry_list %}
+    {% load endless %}
+    {% paginate entry_list %}
+    {% for entry in entry_list %}
+        {% include "main/entry.html" %}        
+    {% endfor %}
+    {% show_pages %}
+{% else %}
+    <p>No entries are available.</p>
+{% endif %}
+{% endblock %}

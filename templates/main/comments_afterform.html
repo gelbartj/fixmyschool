@@ -1,0 +1,37 @@
+{% load comments %}
+<div id="commentformcontents">
+					<div style="font-size:75%;color:#89030D;margin-bottom:10px;">Please keep the discussion civil and constructive. Inappropriate comments will be promptly deleted.</div>
+					    {% if next %}<input name="next" type="hidden" value="{{ next }}" />{% endif %}
+					{% for field in form %}
+					    {% if field.is_hidden %}
+						{{ field }}
+					    {% else %}
+						{% if field.name and field.name != "email" and field.name != "url" %}
+						    {% if field.errors %}{{ field.name }}: {{ field.errors }}{% endif %}
+						    {% if field.name == "name" %}Nickname: {% endif %}
+						    {% if field.name == "comment" %}<br>{% endif %}{{ field }}
+						{% endif %}
+					    {% endif %}
+					{% endfor %}
+				    <p style="margin:0;padding:0;" class="submit"><input class="submit-post" name="post" type="submit" value="Submit comment" /></p>
+				</div>
+			</form>
+	</div>
+	
+</div>
+<div id="comments" style="margin-top:15px;">
+{% for comment in comment_list %}
+        <div style="background-color:{% cycle "#e5e5e5" "#efefef" %};border:1px dashed {% cycle "#c0c0c0" "#d0d0d0" %};" class="comment">
+        <a name="c{{ comment.id}}"></a>
+            <div class="comment_content" style="vertical-align:top;">
+                {{ comment.comment }}
+            </div>
+                <div class="comment_footer">from <strong>{{ comment.name }}</strong>, {{ comment.submit_date|timesince }} ago&nbsp;&nbsp;&nbsp;
+                <a href="{% get_comment_permalink comment %}">permalink</a>
+                <!-- <a href="/flag/{{ comment.id }}/">flag</a>&nbsp;&nbsp;<a href="#">reply</a> //-->
+                {% if request.user.is_superuser or perms.comments.can_moderate %}<a href="/comments/delete/{{ comment.id }}">delete</a>{% endif %}
+                </div>
+        </div>
+        {% endfor %}
+</div>
+</div>

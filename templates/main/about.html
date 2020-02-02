@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block head %}
+<style type="text/css">
+#content-wrap {
+	padding-bottom:250px;
+}
+#bannerimage {
+	height:164px;
+	text-align:left;
+}	
+.about {
+	color:#89030D;
+	display:inline;
+}
+</style>
+{% endblock %}
+{% block banner %}
+<img src="/static/aboutheader.jpg">
+{% endblock %}
+{% block content %}
+<p style="margin-bottom:25px;margin-top:20px;font-size:105%;"><h2 class="about">Fixmyschool.net</h2> <span style="line-height:22px;">&nbsp;provides a platform for students, teachers and administrators in middle and high schools around Arizona 
+to submit firsthand accounts of the problems in their schools&mdash;and how they would fix them.</span></p>
+<span style="font-size:90%;">	
+<p><h3 class="about">Our motto,</h3> <span style="line-height:18px;">"Because the status quo is unacceptable," refers to the fact that even Arizona's best schools 
+(with the possible exception of certain charters) are not providing the state's children with a quality education 
+by international standards. We greatly respect the hard work that our schools have done with the limited resources 
+they have been provided, but our education system simply must begin producing better results if we are to compete 
+in this century's hyper-competitive global marketplace.</span></p>
+
+<p><h3 class="about">Our mission</h3> <span style="line-height:18px;">is to get Arizona's education system on the path to true excellence on an international scale.</strong>
+This website serves that mission by allowing those people who attend or work at a school every day to participate directly
+in the education reform process; they can make their ideas for improvement known to a very wide audience, get feedback and encouragement from 
+that audience, and build momentum for real change.</span></p>
+<p style="margin-top:25px;">Please <a class="red" href="{% url main.views.contact %}">contact us</a> if you have any questions, comments or suggestions 
+regarding our efforts.</p>
+</span>
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class="comment_entry">
+	<h3 style="border-bottom:1px dotted black;margin-bottom:10px;padding-bottom:0;font-size:100%;">Comments</h3>
+	<div class="comment_and_link">
+	<a name="form" id="leave_comment" href="?showform=True#form">
+	<div class="plusminus {% if not showform %}plus{% else %}minus{% endif %}" style="margin-bottom:0;padding-bottom:0;">&nbsp;</div><span style="text-decoration:underline;margin-bottom:0;padding-bottom:0;">Leave a comment</span></a>
+	<div class="commentformwrapper" {% if not showform %}style="display:none;"{% endif %}>
+		<ul class="errorlist" {% if not form.errors%}style="display:none;"{% endif %}></ul>
+			<div class="errors" id="commenterrors" style="display:none;"></div>
+			

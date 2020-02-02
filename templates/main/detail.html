@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ entry.excerpt }}{% endblock %}
+{% block head %}
+{% load comments %}
+{% get_comment_count for entry as comment_count %}
+<script src="/static/ajaxcomments/js/post-comment.js" type="text/javascript"></script>
+<style type="text/css">
+.entry {
+	border-bottom:0;
+	margin-bottom:10px;
+}
+
+#bannerimage {
+	display:none;	
+}
+
+#id_honeypot { 
+	display:none; 
+}
+
+{% if comment_count < 7 %}
+#content-wrap {
+	{% if comment_count < 4 %}
+	padding-bottom:450px;
+	{% endif %}
+	{% if comment_count >= 4 and comment_count < 7 %}
+	padding-bottom:250px;
+	{% endif %}
+}
+{% endif %}
+
+.smallproblem {
+	font-size:150%;
+	color:#89030D;
+	margin-bottom:0;
+}
+
+.smallsolution {
+	font-size:150%;
+	color:#0c8903;
+	margin-bottom:0;	
+}
+.problemtext, .solutiontext {
+	margin:5px 0 0 0;
+	padding:0;
+	position:static;
+}
+#id_comment {
+	margin:5px 0 5px 0;
+}
+</style>
+<script type="text/javascript" src="/static/voting.js"></script>
+<script type="text/javascript" src="/static/detail.js"></script>
+{% if entry.votes < 5 %}
+<meta name="ROBOTS" content="NOINDEX, FOLLOW" />
+{% endif %}
+{% endblock %}
+{% block content %}
+<div style="background-color:#efefef;border:1px solid #AAA;margin-top:10px;">
+{% include "main/entry.html" %}
+</div>
+{% get_comment_list for entry as comment_list %}
+{% include "main/comments.html" %}
+{% endblock %}
+

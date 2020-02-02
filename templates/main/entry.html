@@ -1,0 +1,96 @@
+{% block head %}
+{% endblock %}
+{% load comments %}
+{% load humanize %}
+{% load cookie_array %}
+{% cookie_array request.session entry.id %}
+{% get_comment_count for entry as comment_count %}
+<div class="entry" id="{{ entry.id }}" width="100%">	
+	<div class="content">
+	<div class="problemblock">
+	<div style="width:40px;margin-right:20px;float:left;">
+			{% if cookie == "problem" or cookie == "both" %}
+				<div class="problemvotes active">{{ entry.problemvotes }}</div> 
+			{% else %}
+				<div class="problemvotes">{{ entry.problemvotes }}</div> 
+			{% endif %}			
+			<div class="problemvoting" style="margin-right:20px;margin-bottom:0;padding-bottom:0;">  
+				<form method="POST" action="/vote/" style="margin:0;padding:0;">
+				{% csrf_token %}
+				<input type="hidden" name="action" value="p{{entry.id}}"></input> 
+				{% if cookie == "problem" or cookie == "both" %}
+					<input type="submit" value="" class="problemvote active" height=25 width=40 title="My school has this problem, too." alt="My school has this problem, too.">&nbsp;&nbsp;&nbsp;</input> 
+				{% else %}
+					<input type="submit" value="" class="problemvote" height=25 width=40 title="My school has this problem, too." alt="My school has this problem, too.">&nbsp;&nbsp;&nbsp;</input> 
+				{% endif %}	
+				</form>
+			</div>
+		</div>
+			<div style="padding-top:0;margin-top:0; margin-left:60px;">
+				<strong {% if request.path == "/" or request.path == "/top/" or request.path == "/best/" %}class="problem"{% else %}class="smallproblem"{% endif %}>problem:</strong>
+				<div class="problemtext">
+					{{ entry.problem|urlizetrunc:30|linebreaks }}
+				</div>
+			</div>
+		</div>
+		<div style="margin-top:30px;" class="solutionblock">
+	<div style="width:40px;margin-right:20px;float:left;">
+			{% if cookie == "solution" or cookie == "both" %}
+				<div class="solutionvotes active">{{ entry.solutionvotes }}</div> 
+			{% else %}
+				<div class="solutionvotes">{{ entry.solutionvotes }}</div> 
+			{% endif %}			
+			<div class="solutionvoting" style="margin-right:20px;margin-bottom:0;padding-bottom:0;">  
+				<form method="POST" action="/vote/" style="margin:0;padding:0;border:0;">
+				{% csrf_token %}
+				<input type="hidden" name="action" value="s{{entry.id}}"></input> 
+				{% if cookie == "solution" or cookie == "both" %}
+					<input type="submit" value="" class="solutionvote active" height=25 width=40 border=0 title="Fantastic idea. Let's make it happen." alt="Fantastic idea. Let's make it happen.">&nbsp;&nbsp;&nbsp;</input> 
+				{% else %}
+					<input type="submit" value="" class="solutionvote" height=25 width=40 border=0 title="Fantastic idea. Let's make it happen." alt="Fantastic idea. Let's make it happen.">&nbsp;&nbsp;&nbsp;</input> 
+				{% endif %}	
+				</form>
+			</div>
+		</div>
+			<div style="padding-top:0;margin-top:0; margin-left:60px;">
+				<strong {% if request.path == "/" or request.path == "/top/" or request.path == "/best/" %}class="solution"{% else %}class="smallsolution"{% endif %}>solution:</strong>
+				<div class="solutiontext">
+					{{ entry.solution|urlizetrunc:30|linebreaks }}
+				</div>
+			</div>
+		</div>
+		
+			</div>
+	
+			
+	<div class="footer">
+		<div class="leftfooter">
+		{% if request.path == "/" or request.path == "/top/" or request.path == "/best/" %}<a href="/{{ entry.id }}/{{ entry.slug }}/">Comments ({{ comment_count }})</a> | {% endif %}{{ entry.get_usertype_display }}, {{ entry.school.name }}
+		<div style="font-size:80%;color:#888888;padding-top:3px;">Posted {{ entry.created|naturalday }} at {{ entry.created|date:"g:i a" }}</div>
+		</div>
+		<div class="rightfooter">
+		
+		
+	<ul class="sharelinks">
+	<li><a rel="external" class="facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2F{{ domain|urlencode }}%2F{{ entry.id }}%2F{{ entry.slug|urlencode }}%2F&t=fixmyschool.net%20-%20Problem%2FSolution" title="Share this on Facebook">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	<!-- <li><iframe src="http://www.facebook.com/plugins/like.php?app_id=216566861716508&amp;href=http%3A%2F%2F{{ domain|urlencode }}%2F{{ entry.id }}%2F{{ entry.slug|urlencode }}%2F&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe></li>//-->
+	</li>
+	<li><a rel="external" class="twitter" title="Share this on Twitter" href="https://twitter.com/share?original_referer={{ request.build_absolute_uri|urlencode }}&related=expectmoreaz%3ADemanding%20more%20from%20Arizona's%20education%20system&source=tweetbutton&text=RT%20%40fixmyschool%3A%20{{ entry.excerpt|urlencode }}&url=http%3A%2F%2F{{ domain|urlencode }}%2F{{ entry.id|urlencode }}%2F{{ entry.slug|urlencode }}%2F" class="twitter-share-button" 
+			data-url="http://{{ domain }}/{{ entry.id }}/{{ entry.slug }}" 
+			data-text="RT @fixmyschool: {{ entry.excerpt }}..."
+			data-related="expectmoreaz:Demanding more from Arizona's education system"
+			data-count="none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		</li>
+		<li><a rel="external" class="stumbleupon" title="Share this on StumbleUpon" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2F{{ domain|urlencode }}%2F{{ entry.id }}%2F{{ entry.slug|urlencode }}%2F&title=fixmyschool.net">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+		<li><a rel="external" class="reddit" title="Share this on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2F{{ domain|urlencode }}%2F{{ entry.id }}%2F{{ entry.slug|urlencode }}%2F&title=fixmyschool.net">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+		<!--<li><div style="margin:0;padding:0;height:24px;vertical-align:middle;display:inline;"><g:plusone size="small" count="false" href="http://{{ domain}}/{{ entry.id }}/{{ entry.slug }}/"></g:plusone></div></li>//-->
+		</ul>
+		</div>
+		{% ifequal request.path "/moderate/" %}
+			<div style="text-align:left;"><br><input type="submit" action="." method="post" value="Approve" class="approve" />
+			<input type="submit" action="." method="post" value="Reject" class="reject" /></div>
+		{% endifequal %}
+	</div>
+        	
+        	
+</div>

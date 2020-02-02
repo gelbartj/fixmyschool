@@ -1,0 +1,8 @@
+<div class="comment" style="border:2px solid #89030D;">
+<div class="comment_content" style="vertical-align:top;">
+                {{ comment.comment }}
+            </div>
+                <div class="comment_footer">from <strong>{{ comment.name }}</strong>, {{ comment.date_submitted|timesince }} ago&nbsp;&nbsp;&nbsp;<a href="#">Flag</a>&nbsp;&nbsp;<a href="#">Reply</a><div style="text-align:right;float:right;display:none;"><a href="#">Permalink</a> <a href="#">Delete</a></div></div>
+            </div>
+</div>
+</div>

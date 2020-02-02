@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block head %}
+<style type="text/css">
+#content-wrap {
+	padding-bottom:350px;
+}
+#bannerimage {
+	height:164px;
+	text-align:left;
+}
+ul.contact li {
+	padding-bottom:30px;
+	font-size:110%;
+}
+ul.contact img {
+	padding-right:10px;
+	border:0;
+	vertical-align:middle;
+}
+ul.contact {
+	margin:10px -10px -10px -10px;
+	padding:10px 10px 10px 30px;
+
+}
+a.social {
+	color:black;
+	font-weight:bold;
+	text-decoration:none;
+}
+	
+</style>
+{% endblock %}
+{% block banner %}
+<img src="/static/contactheader.jpg">
+{% endblock %}
+{% block content %}
+<div style="padding:10px;margin-top:10px;background-color:#ececec;">
+<h3 style="font-weight:normal;margin-top:0;padding-top:0;">Questions, comments, concerns? You have a few options:</h3>
+
+<ul class="contact"><li><a class="social" href="mailto:contact&#64;fixmyschool&#46;net"><img src="/static/email-huge.png"><div style="display:inline-block;vertical-align:middle;"><strong>E-mail</strong></a> us at <a class="red" href="mailto:contact&#64;fixmyschool&#46;net">contact&#64;fixmyschool&#46;net</a>.</div></li>
+<!--<li>Use the <strong>form</strong> below.</li>//-->
+<li><a href="http://www.facebook.com/fixmyschool"><img src="/static/newfacebook.png"></a><div style="display:inline-block;vertical-align:middle;">Write on our <a class="social" href="http://www.facebook.com/fixmyschool">Facebook</a> wall (<a class="red" style="font-size:90%;" href="http://www.facebook.com/fixmyschool">facebook.com/fixmyschool</a>).</div></li>
+<li style="padding-bottom:0;">
+<a href="http://www.twitter.com/fixmyschool"><img src="/static/cutetwitter.png"></a><div style="display:inline-block;vertical-align:middle;">Get in touch on <a class="social" href="http://www.twitter.com/fixmyschool">Twitter</a> (<a class="red" style="font-size:90%;" href="http://www.twitter.com/fixmyschool">@fixmyschool</a>).</div></li>
+</ul>
+<!--<br><br><br>
+<form>
+<table>
+<tr><td align=right>Name: </td><td><input type="text"></tr></td>
+<tr><td align=right>E-mail: </td><td><input type="text"></tr></td>
+<tr><td align=right>Subject of message: </td><td><input type="text"></tr></td>
+<tr><td colspan=2><textarea rows=10 cols=40></textarea></tr></td>
+<tr><td colspan=2 align=right><input type="submit" value="Send it in"></tr></td>
+</table>
+</form>
+//-->
+</div>
+{% endblock %}

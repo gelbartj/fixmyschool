@@ -1,0 +1,50 @@
+<div style="padding:10px;">
+
+<p style="margin:0 0 10px 0;padding:0;">
+<a href="/?showform=true#form">
+<img src="/static/submit.gif" alt="Submit a problem/solution" title="Submit a problem at your school and a solution for it." border=0>
+</a>
+</p>
+
+<p style="margin:0 0 10px 0;padding:0;">
+<a href="/share/">
+<img src="/static/share.gif" alt="Share your story" title="Share your story and it might be chosen as biography of the month." border=0>
+</a>
+</p>
+
+<div style="margin:25px 0 30px 0;padding:0 7px 7px 5px;background-image:url('/static/letmeinbg.gif');background-position:top center;background-repeat:repeat-x;overflow:hidden;">
+<div style="text-align:center;margin-bottom:0;padding-bottom:0;">
+<img src="/static/letmein.gif">
+</div>
+<div style="color:#666;font-size:75%;margin-top:0;padding:5px 0 0 0;">
+<p style="margin:0;">
+Submissions are currently limited to a select few schools in the Phoenix area (though discussions are open to all).
+</p>
+<p style="margin:5px 0 0 0;">
+If you want to send in experiences from your school, write its name in the box below and hit &#8220;Vote.&#8221;
+</p>
+<p style="margin:5px 0 5px 0;">
+The school with the most votes will be let in next!
+</p>
+</div>
+{% if not request.session.schoolreq %}
+<div id="schoolreqsuccess" class="successbox" style="color:#0c8903;font-size:75%;margin-bottom:0;text-align:center;font-weight:bold;{% if not successmsg %}display:none;{% endif %}">Thank you, your vote has been received.</div>
+<form id="schoolrequest" action="/schoolreq/" method="post" style="text-align:center;">
+{% csrf_token %}
+<input type="hidden" value="{{ request.path }}" name="next">
+<div id="schoolreqerrors" class="errors" style="{% if not messages %}display:none;{% else%}{% ifnotequal request.path "/?showform=True#form" %}{% for message in messages %}{% if message.tags != "error" %}display:none;{% endif %}{% endfor %}{% endifnotequal %}{% endif %}font-size:75%;">{% for message in messages %}{{ message }}{% endfor %}</div>
+<input type="text" value="Your school name" name="school" id="schoolreqtext"><input id="request_submit" type="submit" value="Vote"><div style="display:none;" id="requestloader"><img height=16 width=16 src="/static/loader_white.gif"></div>
+</form>
+{% else %}
+<div style="margin:0;padding:0;text-align:center;">
+<strong style="font-size:75%;">Thank you for voting!</strong>
+</div>
+{% endif %}
+</div>
+
+
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FFixMySchoolnet%2F194044820627749&amp;width=195&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;height=365" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:365px;" allowTransparency="true"></iframe>
+<br><br><a href="http://twitter.com/fixmyschool" class="twitter-follow-button" data-show-count="false">Follow @fixmyschool</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div>
+

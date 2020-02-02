@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+<script language="javascript" src="/static/cycle.js"></script>
+<script language="javascript" src="/static/homepage.js"></script>
+<script language="javascript" src="/static/voting.js"></script>
+<script type="text/javascript" src="/static/tipTip.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/tipTip.css" />
+<link rel="stylesheet" href="/static/jqModal.css" />
+<script language="javascript" src="/static/jqModal.js"></script>
+<script language="javascript">
+/* Beta */
+$(document).ready(function() {
+$('#betamessage').jqm();
+{% ifequal request.session.beta "second" %}
+$('#betamessage').jqmShow();
+{% endifequal %}
+});
+/* Endbeta */
+</script>
+{% endblock %}
+{% block betamessages %}
+<a href="#" class="jqModal">Show beta welcome message</a>
+<div class="jqmWindow" id="betamessage">
+
+<a href="#" class="jqmClose">Close</a>
+<hr>
+<p style="margin-top:0;padding-top:0;"><h3 style="color:#89030D;">Welcome, beta testers!</h3> Thank you for helping get this site ready for launch.</p> 
+<p>Go ahead and try absolutely everything here - press every button, click every link, try to make things break.</p>
+<p>If you get a big, scary error message, we'll get an e-mail about it. For everything else, please
+submit a bug report using the "Beta feedback" link in the navbar. If a screenshot would really help explain the problem, 
+please take one and e-mail it to <a class="red" href="mailto:contact&#64;fixmyschool&#46;net">contact&#64;fixmyschool&#46;net</a>.
+</p>
+<p>You can also use the "Beta feedback" link to submit suggestions for the site, which we would love to hear. Thanks again for your support, and have fun!</p>
+<p>-The fixmyschool.net team</p>
+</div>
+{% endblock %}
+{% block banner %}
+<div class="slideshow">
+<img src="/static/header1.jpg" width="641" height="216" /> 
+    <img src="/static/header2.jpg" width="641" height="216" style="display:none;" class="slideshow2" />
+    <img src="/static/header3.jpg" width="641" height="216" style="display:none;" class="slideshow3" /> 
+</div>
+{% endblock %}
+{% block content %}
+<div class="verytopform" style="margin-bottom:20px;padding-bottom:15px;display:block;border-bottom:1px dashed #777777;">
+	<img src="/static/idea2.gif"><br>
+	<a id="leave_post" href="{% if not showform %}?showform=True#form{% else %}/#form{% endif %}" style="border:0;text-decoration:none;" name="form">
+		<div class="plusminus {% if not showform %}plus{% else %}minus{% endif %}">&nbsp;</div><span class="tell_us">Submit your own thoughts</span>
+	</a>
+	{% with request.session.errors as errors %}
+	<div class="errors" id="entryerrors" {% if not errors %}style="display:none;"{% endif %}>{{ errors }}</div>{% endwith %}
+	<div class="entryformwrapper" {% if not showform %}style="display:none;"{% endif %}>
+		<div class="entryform" style="font-family:Lucida Grande;">
+			<form action="/submit/" method="post" id="entrysubmit" style="margin-left:5px;margin-top:5px;">
+			{% csrf_token %}
+			<div style="margin-bottom:10px;">
+			<p>
+			{{ form.usertype.label_tag }}: {{ form.usertype }}<a href="#" style="vertical-align:super;font-size:80%;" class="question" title="<font size=2>&quot;Parent&quot; is not an option because parents do not have the firsthand experience that students, teachers and administrators do. If you are a parent, we encourage you to participate in the comments sections instead.</font>">Parent?</a>
+			</p>
+			<p style="padding-right:0px;margin-right:0px;">
+			{{ form.school.label_tag }}: {{ form.school }}
+			</p>
+			</div>
+			<p style="display:table-cell;margin-top:10px;margin-bottom:5px;margin-right:0px;padding-right:5px;padding-left:5px;padding-bottom:5px;background-color:#89030d;color:white;border:1px solid black;">
+			What's wrong at my school:<br>
+			<textarea id="id_problem" onBlur="if (this.value == ''){this.style.color = '#555555';this.value = 'Try to give specific examples of issues your school is facing rather than just saying &quot;it sucks.&quot;\n\nThe best submissions highlight problems that your school or district knows about but refuses to fix.\n\nHTML is not permitted. Line breaks will be retained. URLs will be automatically converted to links.';}" onFocus="if(this.value.substr(0,39)==&#39;Try to give specific examples of issues&#39;){this.value = &#39;&#39;;this.style.color=&#39;#000000&#39;;}" rows="5" cols="75" name="problem">
+Try to give specific examples of issues your school is facing rather than just saying "it sucks."
+
+The best submissions highlight problems that your school or district knows about but refuses to fix.
+
+HTML is not permitted. Line breaks will be retained. URLs will be automatically converted to links.
+			</textarea> 
+			</p><br>
+			<p style="display:table-cell;margin-top:10px;margin-right:0px;padding-right:5px;padding-left:5px;padding-bottom:5px;background-color:#047204;margin-bottom:0px;color:white;border:1px solid black;">
+			How I'd fix it:<br>
+			<textarea id="id_solution" onBlur="if (this.value == '') {this.style.color = '#555555';this.value = 'Have an idea of how your school can do better? Submit it here.\n\nIf you leave this field blank, your solution will appear as &quot;I have no idea.&quot;';}" onFocus="if(this.value.substr(0,46)==&#39;Have an idea of how your school can do better?&#39;){this.value = &#39;&#39;;this.style.color=&#39;#000000&#39;;}" rows="5" cols="75" name="solution">
+Have an idea of how your school can do better? Submit it here.
+
+If you leave this field blank, your solution will appear as "I have no idea."			
+			</textarea> 
+			</p><br>
+			<div>
+			<div style="text-align:left;float:left;font-size:80%;width:60%;margin-right:0px;padding-right:0px;margin-top:0px;padding-top:0px;padding-bottom:5px;">
+				Have more to say? We want to hear it! <a href="/share/" style="color:black;font-weight:bold;" class="special">Share your story</a> and it could be featured as our next biography of the month.
+			</div>			
+			<div style="text-align:right;margin-right:70px;">
+				<span id="loader" style="display:none;"><div style="display:inline-block;margin-right:5px;"><img src="/static/loader_white.gif" height=24 width=24></div></span>
+				<input type="submit" id="entry_submit" value="Send it in" />
+			</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="successbox" id="entrysuccess" style="{% if not messages %}display:none;{% else %}{% for message in messages %}{% if message.tags != "success" %}display:none;{% endif %}{% endfor %}{% endif %}">
+	<!-- Thank you for contributing to fixmyschool.net. Your submission is now awaiting moderation and will be posted as soon as it is approved. Check back soon to see it live! //-->
+	Thank you for contributing to fixmyschool.net. Since the site is still in beta, your post will appear as soon as you refresh this page. Once the beta ends, all submissions will require moderator approval.
+</div>
+    <div class="endless_page_template">
+    {% include page_template %}
+    </div>
+{% endblock %}

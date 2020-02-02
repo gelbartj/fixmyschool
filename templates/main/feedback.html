@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block head %}
+<style type="text/css">
+#content-wrap {
+	padding-bottom:350px;
+}
+#bannerimage {
+	display:none;
+}
+ul.contact li {
+	padding-bottom:30px;
+	font-size:110%;
+}
+ul.contact img {
+	padding-right:10px;
+	border:0;
+	vertical-align:middle;
+}
+ul.contact {
+	margin:10px -10px -10px -10px;
+	padding:10px 10px 10px 30px;
+
+}
+a.social {
+	color:black;
+	font-weight:bold;
+	text-decoration:none;
+}
+	
+</style>
+<script src="/static/feedback.js" type="text/javascript"></script>
+{% endblock %}
+{% block banner %}
+{% endblock %}
+{% block content %}
+<div style="padding:10px;margin-top:10px;background-color:#ececec;">
+<h1>Beta feedback</h1>
+<div id="feedbacksuccess" class="successbox" style="display:none;">Thank you for submitting your bug report/suggestion. We appreciate your input.</div>
+<div id="formwrapper">
+<form id="feedbackform" action="." method="post">
+{% csrf_token %}
+<div id="feedbackerrors" class="errors" style="display:none;">{{ errors }}</div>
+<table>
+<tr><td align=right>Your e-mail address: </td><td><input type="text" size="40" id="id_email" name="email"></td><td>{{ form.email.errors }}</td></tr>
+<tr><td align=right>Page you were on when bug occurred: </td><td><input onFocus="if (this.value == 'Leave blank if you have a suggestion.'){this.style.color = '#000';this.value='';}" onBlur="if (this.value == ''){this.style.color = '#555';this.value='Leave blank if you have a suggestion.';}" size="40" name="page" id="id_page" type="text" value="Leave blank if you have a suggestion."></td><td>{{ form.page.errors }}</td></tr>
+<tr><td align=right style="vertical-align:top;">Description of bug/suggestion: </td><td><textarea onFocus="if (this.value == 'Put your suggestion here if you have one instead of a bug report.'){this.style.color = '#000';this.value='';}" onBlur="if (this.value == ''){this.style.color = '#555';this.value='Put your suggestion here if you have one instead of a bug report.';}" rows=10 cols=40 name="bug" id="id_bug">Put your suggestion here if you have one instead of a bug report.</textarea></tr></td><td>{{ form.bug.errors }}</td></tr>
+<tr><td colspan=3 align=right><span id="loader" style="display:none;"><div style="display:inline-block;margin-right:5px;"><img width=24 height=24 src="/static/loader_white.gif"></div></span><input type="submit" id="feedbacksubmit" value="Send it in"></tr></td>
+</table>
+</form>
+</div>
+</div>
+{% endblock %}

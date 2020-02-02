@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Share your story{% endblock %}
+{% block head %}
+<script src="/static/nicEdit-old.js" type="text/javascript"></script> 
+<script src="/static/share.js" type="text/javascript"></script> 
+<script type="text/javascript"> 
+bkLib.onDomLoaded(function() {
+	new nicEditor({iconsPath : '/static/nicEditorIcons.gif'}).panelInstance('id_bio');
+});
+</script> 
+
+<style type="text/css">
+#bannerimage { height:216px;margin-bottom:10px; }
+</style>
+ {% endblock %}
+{% block banner %}
+<img src="/static/shareheader2.jpg">
+{% endblock %}
+{% block content %}
+<div style="font-family:Georgia;">This form is for those people who had a <strong>particularly eventful</strong> time going through the Arizona school system as a student, teacher or administrator and wish to share their experiences in detail.
+<span style="font-size:80%;color:#666;">&nbsp;&nbsp;(Looking for the regular entry form? It's over <a class="small" href="/?showform=True#form">here</a>.)</span></div>
+<div style="font-family:Georgia;margin-top:20px;margin-bottom:0;padding-bottom:0;">If you are in the right place, please follow these easy <strong>guidelines</strong> in your submission:</div>
+<ol style="font-family:Lucida Grande;font-size:80%;background-color:#d8f1d2;border:0;padding-top:5px;padding-bottom:10px;margin-top:5px;">
+<li style="margin-bottom:10px;"><strong>Make sure your story has a point.</strong> Try to focus on experiences that have left a lasting impact on you and/or your friends.<br></li>
+<li style="margin-bottom:10px;">If you <strong>attempted to fix your school's problems</strong> in any way, make sure to say so and describe the outcome.<br></li>
+<li style="margin-bottom:10px;"><strong>Don't make it too long,</strong> but don't make it too short either. Typical submissions are 250-400 words.</li>
+<li>Take a <strong>look at the current <a href="/bios">biography of the month</a></strong> if you need some inspiration.</li>
+</ol>
+<div style="font-size:80%;color:#666;text-align:center;">If you prefer, you can send your story and the other information required below <br>to <a class="smalll" href="mailto:biography&#64;fixmyschool&#46;net">biography&#64;fixmyschool&#46;net</a> instead of using this form.
+</div>
+<div class="errors" style="display:{% if not form.errors %}none{% endif %};">
+{% if form.usertype.errors %}<p><strong>My status: </strong>{% for error in form.usertype.errors %}{{ error }} {% endfor %}</p>{% endif %}
+{% if form.school.errors %}<p><strong>My school: </strong>{% for error in form.school.errors %}{{ error }} {% endfor %}</p>{% endif %}
+{% if form.bio.errors %}<p><strong>My story: </strong>{% for error in form.bio.errors %}{{ error }} {% endfor %}</p>{% endif %}
+<p id="emptystatus" style="display:none;">Please select an option from the "My status" dropdown menu.</p>
+<p id="emptyschool" style="display:none;">Please enter your school's full name.</p>
+<p id="emptystory" style="display:none;">Please enter your story in the field below.</p>
+<p id="toolong" style="display:none;">Your story exceeds 600 words. Please shorten it to that limit or email the full text to 
+<a class="red" href="mailto:biography&#64;fixmyschool&#46net">biography&#64;fixmyschool&#46;net</a>
+</p>
+<p id="tooshort" style="display:none;">Your story is a bit short. Could you beef it up to at least 150 words?</p>
+<p id="biolength" style="display:none;">
+<span style="font-weight:normal;font-size:95%;"></span>
+</p>
+</div>
+<div class="successbox" id="sharesuccess" style="margin-top:15px;text-align:center;border-bottom:3px solid #0c8903;border-top:3px solid #0c8903;display:none;margin-bottom:200px;">
+Thank you for sharing your story with us. <br>You have just made a significant contribution to education reform in Arizona.<br><br>Check back in a few weeks to see if your submission <br>was selected as our next biography of the month.
+</div>
+<form method="post" action="." id="storyform" style="border:1px solid #AAA;padding:10px 10px 0 10px;margin-top:10px;">
+<div style="color:#89030D;font-size:80%;margin:-10px;padding:10px;background-color:#f5f5f5;">* All fields except "Experience" are required.</div>
+{% csrf_token %}
+<div style="background-color:#e2e2e2;margin:10px -10px 0 -10px;padding:10px;">
+<div style="width:550px;font-family:Lucida Grande;">
+			<p style="float:left;margin-top:0;padding-top:0;">
+			{{ form.usertype.label_tag }}: {{ form.usertype }}
+			</p>
+			<p style="float:right;margin-top:0;padding-top:0;">
+			<label for="experience" style="color:#999;">Experience:</label> {{ form.experience }}
+			</p>
+			<p style="clear:both;margin-bottom:0;padding-bottom:0;">
+			<label for="school">My school:</label> {{ form.school }} <span style="color:#333;font-size:80%;">(please, no abbreviations)
+			</p>
+			</div>
+</div>
+			<p style="margin:0 -10px 0 -10px;padding:10px;background-color:#f5f5f5;">
+			{{ form.bio }}
+			</p>
+<div style="background-color:#e2e2e2;margin:0 -10px 0 -10px;padding:10px;">
+<input type="submit" value="Submit my story" class="bigbutton" id="share_submit">
+</div>
+</form>
+{% endblock %}

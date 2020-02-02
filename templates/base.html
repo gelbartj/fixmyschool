@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/static/site.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> //-->
+<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+{% block head %}
+{% endblock %}
+<!-- PHOTO CREDITS
+Child silhouette: Flickr user Macrophile
+//-->
+<title>fixmyschool.net - {% block title %}{% endblock %}</title>
+</head>
+<body>
+<div style="position:absolute;">
+<a href="/"><img border=0 src="/static/header9.gif"></a>
+</div>
+<div id="header">
+<div id="rightheader">
+<ul>
+<li>Test 2</li>
+<li>Test test</li>
+</ul>
+</div>
+</div>
+<div id="infobar">
+{% include "main/infobar.html" %}
+</div>
+<center>
+<div id="wrap">
+<div id="content-wrap">
+<div id="content">
+<div id="betamessages">
+{% block betamessages %}
+{% endblock %}
+</div>
+<div id="bannerimage">
+{% block banner %}
+{% endblock %}
+</div>
+{% block content %}
+{% endblock %}
+</div>
+</div>
+<div id="sidebar">
+{% include "main/sidebar.html" %}
+</div>
+</div>
+</center>
+<div id="footer">
+<a href="/terms/">Terms of use</a><!-- &bull; <a href="/privacy/">Privacy policy</a>//--><br>
+Copyright &copy; fixmyschool.net 2011
+</div>
+</body>
+</html>

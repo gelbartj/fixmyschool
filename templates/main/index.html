@@ -1,0 +1,55 @@
+<!--{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+<style type="text/css">
+a.special:hover { text-decoration:none; }
+</style>
+{% endblock %}
+{% block content %}
+<div class="verytopform" style="padding-left:10px;padding-bottom:5px;display:block;border-bottom:1px solid #777777;">
+	<img src="/static/idea.gif" style="padding-bottom:5px;" /><br>
+	<a id="leave_post" href="#" style="border:0px solid black;text-decoration:none;">
+		<div class="plus">&nbsp;</div><span style="text-decoration:underline;font-weight:bold;">Tell us your thoughts</span>
+	</a>
+	<div class="errors"></div>
+	<div class="entryformwrapper">
+		<div class="entryform alpha60">
+			<form action="/submit/" method="post" id="entrysubmit">
+			{% csrf_token %}
+			<p>
+			{{ form.usertype.label_tag }}: {{ form.usertype }}<a href="#" style="vertical-align:super;font-size:80%;" class="question" title="<font size=2>&quot;Parent&quot; is not an option because parents do not have the firsthand experience that students, teachers and administrators do. If you are a parent, we apologize but thank you for your interest.</font>">?</a>
+			</p>
+			<p>
+			{{ form.entrytype.label_tag }}: {{ form.entrytype }}
+			</p>
+			<p style="padding-right:0px;margin-right:0px;">
+			{{ form.school.label_tag }}: {{ form.school }}
+			</p>
+			<p style="display:block;margin-top:5px;margin-bottom:5px;margin-right:0px;padding-right:0px;">
+			{{ form.content }}
+			</p>
+			<div style="margin:0;display:table-cell;">
+				<input type="submit" value="Send it in" />
+			</div>
+			<div style="text-align:right;float:right;font-size:80%;width:60%;margin-top:-23px;margin-right:20px;">
+				Have more to say? We want to hear it! <a href="/" style="color:black;font-weight:bold;" class="special">Share your story</a> and it could be featured as our next biography of the month.
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+{{ request.session }}
+<div class="successbox">
+	Thank you for contributing to fixmyschool.net. Your submission is now awaiting moderation and will be posted as soon as it is approved. Check back soon to see it live!
+</div>
+{% if entry_list %}
+    {% load endless %}
+    {% paginate entry_list %}
+    {% for entry in entry_list %}
+        {% include "main/entry.html" %}
+    {% endfor %}
+    {% show_pages %}
+{% else %}
+    <p>No entries are available.</p>
+{% endif %}
+{% endblock %}

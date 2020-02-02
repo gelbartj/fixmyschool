@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Biography of the month - {{ bio.month }}{% endblock %}
+{% block head %}
+<script type="text/javascript" src="/static/detail.js"></script>
+<script src="/static/ajaxcomments/js/post-comment.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Brawler:400&v2' rel='stylesheet' type='text/css'>
+<style type="text/css">
+#id_honeypot { display:none; }
+a.smallred {
+	font-size:80%;
+	font-weight:bold;
+}
+#bannerimage {
+	text-align:left;
+	height:155px;
+}
+#biotext p {
+	font-family:'Brawler', sans-serif;
+	line-height:24px;
+}
+
+</style>
+{% endblock %}
+{% block banner %}
+<img src="/static/bioheader.jpg">
+{% endblock %}
+{% block content %}
+<div style="margin:15px 0 10px 10px;color:#444;font-size:80%;"><a href="{% url main.views.share %}">Share your story</a> and it could be featured on this page next month.</div>
+<div style="background-color:#ececec;padding:10px;">
+<div style="margin-bottom:40px;">
+<h3 style='color:#89030D;margin-top:0;padding-top:0;'>{{ bio.month }} {{bio.featured.year}}</h3>
+<h2 style="margin-bottom:5px;font-family:Georgia;">&#8220;{{ bio.headline }}&#8221;</h2>
+<h5 style='color:#89030D;margin-top:0;'>{{ bio.get_usertype_display }} {% if bio.experience and bio.experience != "" %}({{ bio.get_experience_display }} experience) {% endif %}- {{ bio.school }}, {{ bio.school_city }}</h5>
+<!-- <div style="float:right;margin-bottom:20px;">
+<img src="/static/{{ bio.image }}">
+</div> //-->
+<div style="color:#333;" id="biotext">{{ bio.bio|safe }}</div>
+</div>
+<div style="margin-bottom:25px;">
+{% if bio.featured.year != 2011 and bio.featured.month != 7 %}
+<a class="smallred" href="/bios/{% ifnotequal bio.featured.month "1" %}{{ bio.featured.year }}{% else %}{{ bio.featured.year|add:"- 1" }}
+{% endifnotequal %}/{% ifnotequal bio.featured.month "1" %}{{ bio.featured.month|add:"- 1"}}{% else %}12{% endifnotequal %}/"><- Previous month</a>
+{% endif %}
+{% if not latest %}
+<div style="float:right;">
+<a class="smallred" href="/bios/{% ifnotequal bio.featured.month "12" %}{{ bio.featured.year }}{% else %}{{ bio.featured.year|add:"1" }}
+{% endifnotequal %}/{% ifnotequal bio.featured.month "12" %}{{ bio.featured.month|add:"1"}}{% else %}1{% endifnotequal %}/">Next month -></a>
+</div>
+{% endif %}
+</div>
+</div>
+{% load comments %}
+{% get_comment_list for bio as comment_list %}
+{% include "main/comments.html" %}
+{% endblock %}

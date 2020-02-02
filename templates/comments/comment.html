@@ -1,0 +1,12 @@
+{% load comments %}
+<div style="background-color:#efefef;border:2px dotted #89030D;" class="comment">
+        <a name="c{{ comment.id}}"></a>
+            <div class="comment_content" style="vertical-align:top;">
+                {{ comment.comment }}
+            </div>
+                <div class="comment_footer">from <strong>{{ comment.name }}</strong>, {{ comment.submit_date|timesince }} ago&nbsp;&nbsp;&nbsp;
+                <a href="{% get_comment_permalink comment %}">permalink</a>
+                <!-- <a href="/flag/{{ comment.id }}/">flag</a>&nbsp;&nbsp;<a href="#">reply</a> //-->
+                {% if request.user.is_superuser or perms.comments.can_moderate %}<a href="/comments/delete/{{ comment.id }}">delete</a>{% endif %}
+                </div>
+        </div>

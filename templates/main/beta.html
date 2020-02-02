@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+<META NAME="Description" CONTENT="Education reform project: Students, teachers and administrators submit firsthand accounts of problems at their schools and suggestions as to how to address them. Goal: To get Arizona on the path to educational excellence on an international scale.">
+<META http-equiv="Content-Type" CONTENT="text/html; charset=utf-8">
+<title>fixmyschool.net - Beta</title>
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/static/beta.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="/static/beta.css">
+<!-- PHOTO CREDITS
+Antelope Canyon: Wikimedia Commons user Meckimac
+Child silhouette: Flickr user Macrophile
+//-->
+</head>
+<body style="background-image:url('/static/betabg.jpg');background-position:fixed;background-repeat:no-repeat;background-position:top left;background-color:white;">
+<div id="outerdiv"> 
+	<div id="innerdiv" class="alpha60"> 
+		<div style="border-bottom:1px solid #89030D;height:114px;">
+		<img src="/static/betalogo.png" style="position:absolute;" alt="fixmyschool.net">
+		</div>
+		<div style="padding:0 10px 10px 10px;">
+		<center>
+		<p>Welcome to the fixmyschool.net beta.</p><p>Please enter your invite key below.</p>
+					<div id="errors" style="{% if not errors %}display:none;{% endif %}">{{ errors }}</div>
+		<div>
+		<form id="keyform" action="." method="post">
+		{% csrf_token %}
+		<input id="id_key" name="key" type="text" size="20">
+		<input class="redbutton" type="submit" value="Go">
+		<div id="loader" style="margin-top:5px;display:none;">
+		<img height=24 with=24 src="/static/loader_white.gif">
+		</div>
+		</form>
+		</div>
+		<div style="text-align:center;font-size:70%;margin-top:50px;"><a rel="nofollow" href="mailto:contact&#64;fixmyschool&#46;net">Questions?</a></div>
+		</center>
+		</div>
+	</div> 
+</div>
+</body>
+</html>
