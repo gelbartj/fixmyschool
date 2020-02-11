@@ -4,4 +4,4 @@ FixMySchool.net was launched in spring 2012 with the goal of allowing middle sch
 
 This was my first project using Django, the Python-based web framework. At the time, of course, it was Python 2.x, combined on the front-end with jQuery (for effects and AJAX) and even StumbleUpon submission buttons! How things change... 
 
-This project is no longer live and does not have a functioning demo site.
+This project is no longer live, though a partially functional homepage is available from the [Wayback Machine](http://web.archive.org/web/20121127042800/http://www.fixmyschool.net/).
