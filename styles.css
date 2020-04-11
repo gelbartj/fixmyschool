@@ -1,0 +1,1851 @@
+/* Begin base layout */
+{ 
+	margin: 0;
+	padding: 0;
+}
+
+body,html {
+	margin:0 auto;
+	padding:0;
+}
+
+a img { border:0; }
+
+body {
+	font-family:Helvetica;
+	background:#d9d9d9 url('http://static.fixmyschool.net/seamless-2.jpg') top left repeat-y;
+}
+
+h1,h2 {
+	font-family:"Myriad Pro",Helvetica,Arial,sans-serif;
+}
+	
+
+#betamessages {
+	margin-top:10px;
+}
+
+
+#homebanner {
+	margin-top:10px;
+	text-align:center;
+	width:642px;
+	height:266px;
+	padding:5px;
+	border:1px solid #c0c0c0;
+	background:#fff;
+	vertical-align:center;
+	
+}
+
+#bannerimage {
+	margin-top:10px;
+	text-align:center;
+	width:642px;
+	height:266px;
+	vertical-align:center;
+	margin-bottom:10px;
+	
+	
+}
+
+.shadow {
+	margin-bottom:5px;
+	background:url('http://static.fixmyschool.net/bannershadow.jpg') top center no-repeat;
+	height:28px;
+	clear:both;
+	width:100%;
+	
+}
+
+
+#header {
+	clear:both;
+	width:100%;
+	height:89px;
+	border-bottom:1px solid #990000;
+	background-color:#FFFFFF;
+}
+
+#header h1 {
+	margin-bottom:5px;
+}
+
+#rightheader {
+	float:right;
+	text-align:left;
+	margin-top:70px;
+	padding-right:10px;
+	font-size:80%;
+}
+
+
+#infobar {
+	font-size:95%;
+	font-variant:small-caps;
+	font-weight:bold;
+	clear:both;
+	
+}
+
+#infobar a {
+	color:#888;
+	text-decoration:none;
+	border-right:1px dotted #555555;
+	padding-right: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-left:-4px;
+	padding-left:5px;
+}
+
+#infobar li {
+	display:inline;
+}
+
+
+
+#infobar a:hover, #infobar a.active {
+	color:#fff;
+	background-color:#89030d;
+}
+
+#infobar ul {
+	margin:0;
+	padding:0;
+}
+
+#infoshadow {
+	background-image: url('http://static.fixmyschool.net/spritebg.png');
+	background-position: 0px -10px;
+	height:15px;
+	position:absolute;
+	width:100%;
+}
+
+
+#content {
+	padding-top:5px;
+	margin-right:229px;
+	padding-right:10px;
+	padding-left:10px;
+	padding-bottom:100px;
+	
+}
+
+#content-wrap {
+	width:100%;
+	margin-right:-229px;
+	float:left;
+	background-color:white;
+	background-color:#fdfdfd;
+}
+
+#sidebar {
+	width:213px;
+	float:right;
+	border:1px solid #CCC;
+	margin-right:10px;
+	margin-top:15px;
+	margin-bottom:30px;
+	color:#990000;
+}
+
+#verifybox {
+	padding:10px;
+	margin-bottom:15px;
+	background-image: url('http://static.fixmyschool.net/spritebg.png'); 
+	background-position: 95px -50px;
+	color:#000;
+	font-size:80%;
+	border:1px solid #ddd;
+}
+
+ul.small-arrows {
+	margin-left:5px;
+	padding-left:10px;
+	list-style-image:url('http://static.fixmyschool.net/redarrow_small.gif')
+}
+ul.small-arrows li {margin-bottom:5px;}
+
+#footer {
+	position:relative;
+	clear:both;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-top:1px solid #555;
+	background-color:#e8e8e8;
+	font-size:70%;
+	color:#444;
+	z-index:5;
+}
+
+#footer a {
+	color:#333333;
+}
+
+#footer a:hover {
+	text-decoration:none;
+}
+
+* html #footer {
+	height:1px;
+}
+
+#wrap {
+	width:900px;
+	background-color:white;
+	text-align:left;
+	border-right:2px solid black;
+	border-left:2px solid black;
+}
+
+a {
+	color:#555555;
+}
+
+a:hover {
+	color:black;
+}
+
+a.special:hover { text-decoration:none; }
+/* End base layout */
+
+/* Set up basic form appearance */
+input[type="text"], input[type="password"], textarea 
+	{-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; 
+	 -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px;
+	 -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; 
+	 -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; 
+	 background-color:#eee; 
+	 color:#333;
+	 border:1px solid #ccc;
+	 padding:0.3em;
+	 font-family:Helvetica, Arial, sans-serif;
+	 font-size:0.9em;
+}
+/* End basic form appearance */
+
+
+
+/* The entries! */
+.entry, .announcement {
+	padding-top: 10px;
+	padding-bottom:10px;
+	font-weight:300;
+}
+
+
+.thePost {
+	padding-right:15px;
+	padding-bottom:20px;
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+.upvote, .downvote {
+	cursor:pointer;
+	cursor:hand;
+	border:0;
+	text-indent: -9999em;
+        line-height:3000;
+        margin-bottom:-20px;
+        background:transparent;
+}
+
+.upvote {
+	width:40px;
+	height:25px;
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-repeat:no-repeat;
+	background-position: -10px -70px;
+	display:table-cell;
+}
+
+.upvote:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -115px;
+}
+
+.upvote.active {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -160px;
+}
+
+.votes {
+	text-align:center;
+	font-size:90%;
+	color:#888888;
+	border:1px solid #AAA;
+	background-color:#eee;
+	width:38px;
+}
+
+.votes.down {
+	color:#553737; 
+	border:1px solid #666;
+}
+
+.votes.up {
+	color:#42553F;
+	border:1px solid #666;
+}
+
+.downvote {
+	width:40px;
+	height:25px;
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-repeat:no-repeat;
+	background-position: -10px -205px;
+	display:table-cell;
+}
+
+.voting {
+	margin-bottom:20px;
+	width:40px;
+	margin-right:20px;
+	float:left;
+}
+
+.downvote:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -250px;
+}
+
+.downvote.active {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -295px;
+}
+
+.content {
+	margin-left:10px;
+	padding-top:5px;
+	line-height:130%;
+	text-align:left;
+	
+}
+
+.title {
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	font-size:105%;
+	margin-bottom:15px;
+}
+
+.entry .content p {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.content p {
+	margin:0 0 10px 0;
+	padding:0;
+	color:#383838;
+	font-size:95%;
+}
+
+.footer {
+	clear:both;
+	margin-left:10px;
+	text-align:right;
+	margin-right:10px;
+	font-size:95%;
+	color:#555555;
+	position:relative;
+	padding-top:10px;
+
+}
+
+.footer a {
+	color:#89030d;
+	font-weight:normal;
+}
+
+.footer a:hover {
+	color:#89030D;
+	text-decoration:none;
+}
+
+.leftfooter {
+	
+	text-align:left;
+	vertical-align:bottom;
+	
+}
+
+
+.rightfooter {
+	position:absolute;
+	bottom:0;
+	right:0;
+	height:24px;
+	
+	text-align:right;
+	vertical-align:bottom;
+	
+	
+}
+
+.sharelinks {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	vertical-align:bottom;
+}
+
+.sharelinks li {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+.sharelinks li a {
+	height:24px;
+	width:24px;
+	text-decoration:none;
+	background-position:top left;
+	background-repeat:no-repeat;
+	padding-bottom:10px;
+	margin:0;
+}
+
+.sharelinks li a.facebook:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -384px;
+}
+
+.sharelinks li a.twitter:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -472px;
+}
+
+.sharelinks li a.stumbleupon:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -648px;
+}
+
+.sharelinks li a.tumblr:hover {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -560px;
+}
+
+.sharelinks li a.facebook {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -340px;
+}
+
+.sharelinks li a.twitter {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -428px;
+}
+
+.sharelinks li a.stumbleupon {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -604px;
+}
+
+.sharelinks li a.tumblr {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -10px -516px;
+}
+
+.tags {
+	margin-bottom:8px;
+	font-size:85%;
+	color:#666;
+}
+
+.tags a {
+	color:#666;
+}
+
+.tags a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+
+/* End entries */
+
+/* Homepage */
+.redbutton {
+background-color:#89030D;
+padding:0px 6px;
+border:1px solid #840c00;
+height:24px; 
+line-height:24px;
+color:#FFF;
+font-size:16px;
+text-decoration:none;
+font-variant:small-caps;
+font-weight:bold;
+}
+
+.entryform {
+	padding-right:10px;
+	display:table-cell;
+	border:1px solid #aaaaaa;
+	background-image:url('http://static.fixmyschool.net/entrybg.gif');
+	background-repeat:repeat-x;
+	background-position:top left;
+}
+
+.parentform {
+	padding-right:10px;
+	display:table-cell;
+	border:1px solid #aaaaaa;
+	background-image:url('http://static.fixmyschool.net/entrybg.gif');
+	background-repeat:repeat-x;
+	background-position:top left;
+}
+
+.entryformwrapper {
+	margin-top:10px;
+	margin-bottom:10px;
+	
+	
+}
+
+.entryform p {
+	padding-right:10px;
+	display:inline;
+}
+
+.odd {
+	background-color:#f8f8f8;
+	border:1px solid #AAA;
+	margin-bottom:20px;
+}
+
+.even {
+	background-color:#efefef;
+	border:1px solid #999;
+	margin-bottom:20px;
+}
+
+.odd.verified {
+	border:2px solid #AAA;
+}
+
+.even.verified {
+	border:2px solid #999;
+}
+
+.odd strong {
+	color:#e2e2e2;
+}
+
+.even strong {
+	color:#dadada;
+}
+
+.odd{background:#f8f8f8 url('http://static.fixmyschool.net/pencilbg.jpg') bottom right no-repeat}
+.even{background:#efefef url('http://static.fixmyschool.net/applebg.jpg') bottom right no-repeat}
+
+.alpha60 {
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(50, 50, 50) transparent;
+	/* RGBa with 0.6 opacity */
+	background: rgba(230, 230, 230, 0.9);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.successbox {
+	padding:7px;
+	background:#e3eee4;
+	border-top:1px solid #0c8903;
+	border-bottom:1px solid #0c8903;
+	margin-bottom:20px;
+	font-size:95%;
+}
+
+.successbox p{padding:0;margin:0;}
+
+
+.errors {
+border-top:solid 1px #cb2026; 
+border-bottom:solid 1px #cb2026; 
+background:#FFD2D1;
+padding:4px;
+text-align:center;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.errors p {
+	padding:2px;
+	margin:2px;
+}
+
+.endless_page_link {
+	padding:4px;
+	background-color:#ececec;
+	border:1px solid #aaaaaa;
+}
+
+.endless_page_link:hover {
+	border:1px solid black;
+}
+
+.endless_page_current {
+	padding:4px;
+	background-color:#ececec;
+	border:1px solid black;
+}
+
+.plusminus {
+	width:10px;
+	height:10px;
+	padding:5px;
+	margin-right:2px;
+	display:inline;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.plus {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -8px -1px;
+}
+
+.minus {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-position: -8px -31px;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f5f5), color-stop(1, #e9eaeb) );
+	background:-moz-linear-gradient( center top, #f4f5f5 5%, #e9eaeb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f5f5', endColorstr='#e9eaeb');
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	color:#89030d;
+	font-family:Helvetica;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #f0f0f0;
+	-moz-box-shadow:    1px 1px 6px #ccc;
+	-webkit-box-shadow: 1px 1px 6px #ccc;
+	box-shadow:         1px 1px 6px #ccc;
+}.myButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9eaeb), color-stop(1, #f4f5f5) );
+	background:-moz-linear-gradient( center top, #e9eaeb 5%, #f4f5f5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9eaeb', endColorstr='#f4f5f5');
+	background-color:#dfdfdf;
+	color:#89030d;
+}.myButton:active {
+	position:relative;
+	top:1px;
+}
+.tell_us {
+	text-decoration:underline;
+	color:#89030D;
+	font-weight:bold;
+	font-size:110%;
+	font-family:Helvetica, Arial, sans-serif;
+	
+}
+
+.tell_us:hover {
+	text-decoration:none;
+}
+
+#id_title {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size: 0.9em;
+	border: 1px solid #aaa;
+	background: #EEE;
+	color: #333333;
+	margin-bottom:0;
+	margin-top:10px;
+	width:550px;
+	padding:0.28em 0.3em 0.28em 0.3em;
+	}
+	
+#id_thePost {
+	padding:0.3em;
+	font-family:Helvetica, Arial, sans-serif;
+	margin:3px 0 10px 0;
+	font-size: 0.9em;
+	border: 1px solid #aaa;
+	background: #EEE;
+	color: #333;
+	width:550px;
+	height:150px;
+	}
+	
+select#id_usertype {
+    position:relative;
+    z-index:10;
+    width:259px !important;
+    height:26px !important;
+    line-height:26px;
+}
+
+/* dynamically created SPAN, placed below the SELECT */
+span.select{
+    position:absolute;
+    bottom:0;
+    float:left;
+    left:0;
+    width:259px;
+    height:26px;
+    line-height:26px;
+    text-indent:5px;
+    cursor:default;
+    z-index:1;
+    font-size:0.9em;
+    font-family:Helvetica, Arial, sans-serif;
+	}
+
+.entryform span.select {
+    background:url(http://static.fixmyschool.net/bg_select_green.gif) no-repeat 0 0;
+}
+
+#signupleft span.select, #storyform span.select {
+    background:url(http://static.fixmyschool.net/bg_select.gif) no-repeat 0 0;
+}
+
+#storyform #id_notify {width:200px;}
+	
+form div {position:relative;}
+
+/*#id_thePost { background-color:#f5f7fc; }
+
+#id_title { background-color:#fcfcfc; }*/
+
+/* End homepage */
+
+
+/* Details page */
+#commentformcontents {
+	background-color:#f0f0f0;
+	border:1px solid #aaaaaa;
+	display:table-cell;
+	padding:5px;
+}
+
+.commentformwrapper {
+	margin-top:5px;
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+.comment_entry {
+	margin-top:5px;
+	padding-top:5px;
+}
+
+.comment_entry p {
+	margin-top:0;
+	padding-top:0;
+}
+
+.comment_content p {
+	color:#383838;
+	line-height:1.35;
+	font-weight:300;
+}
+	
+.comment_header{
+	font-size:80%;
+	color:#888;
+	margin-left:20px;
+	margin-bottom:10px;
+}
+
+.comment_footer {
+	font-size:80%;
+	color:#888888;
+	margin-top:15px;
+	vertical-align:bottom;
+	margin-left:20px;
+}
+
+.comment_footer a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#89030d;
+}
+
+.comment_footer a:hover {
+	color:#89030d;
+	text-decoration:none;
+}
+
+.comment_voting {
+	margin-top:-5px;
+	margin-left:-3px;
+	width:20px;
+	height:100%;
+	float:left;
+}
+
+.comment_upvote, .comment_downvote {
+	cursor:pointer;
+	cursor:hand;
+	border:0;
+	text-indent: -9999em;
+        line-height:3000;
+        background:transparent;
+        
+}
+
+.comment_upvote {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-repeat:no-repeat;
+	background-position:-65px -12px;
+	width:17px;
+	height:17px;
+	
+}
+
+.comment_upvote:hover {
+	background-position:-65px -54px;
+	cursor:hand;
+	cursor:pointer;
+}
+
+.comment_upvote.active {
+	background-position:-65px -96px;
+}
+
+.comment_downvote {
+	background-image:url('http://static.fixmyschool.net/sprites.png');
+	background-repeat:no-repeat;
+	background-position:-65px -138px;	
+	width:17px;
+	height:17px;
+	margin-top:-10px;
+	
+}
+
+.comment_downvote:hover {
+	background-position:-65px -180px;
+	cursor:pointer;
+	cursor:hand;
+}
+
+.comment_downvote.active {
+	background-position:-65px -222px;
+}
+
+
+.response {
+	color:#000;
+	padding-top:10px;
+}
+
+#leave_comment {
+	border:0;
+	text-decoration:none;
+}
+
+.comment {
+	margin-bottom:7px;
+	padding:10px 0 10px 7px;
+	font-size:95%;
+}
+
+.noComments {
+	padding-bottom:250px;
+}
+/* End details page */
+
+/* Share page */
+.bigbutton {
+background-color:#FFF;
+padding:0px 6px;
+border:1px solid #000;
+height:28px; 
+line-height:28px;
+color:#000;
+font-size:18px;
+text-decoration:none;
+font-variant:small-caps;
+font-weight:bold;
+}
+/* End share page */
+
+/* Misc */
+a.red { color:#89030D; }
+a.red:hover { color:#89030D; 
+text-decoration:none; }
+a.small:hover { color:#444;text-decoration:none; }
+.userbadge {font-family:Helvetica,Arial,sans-serif;font-weight:600;text-decoration:none;color:#555}
+.userbadge.verified {color:#0c8903;font-weight:bold;}
+.userbadge.superuser {color:#89030d;font-weight:bold;}
+a.userbadge:hover{color:#000;}
+/* End misc */
+
+/* Verification page */
+.quote {
+	font-size:120%;
+	font-family:'Brawler';
+	background-color:#EDEDED;
+	border-top:1px dashed #AAA;
+	border-bottom:1px dashed #AAA;
+	padding:10px;
+	text-align:center;
+}
+ul.arrows {list-style-image:url('http://static.fixmyschool.net/redarrow.gif')}
+ul.arrows li {margin-bottom:10px;}
+.getVerified {font-weight:bold;color:#0c8903;}
+.getVerified:hover {color:#345735;}
+.complete {font-weight:bold;color:#0c8903;}
+.rejected {font-weight:bold;color:#89030d;}
+ul.steps li { margin-bottom:10px;font-size:110%; }
+ul.steps {margin-top:15px;margin-bottom:25px;}
+.smaller { color:#666;font-size:85%;margin-top:5px;display:block; }
+/* End verification */
+
+/* Registration form */
+#signup {font-family:Helvetica, Arial, sans-serif;padding-bottom:200px;}
+#fancybox-content #signup {background:url('http://static.fixmyschool.net/bookpile.jpg') bottom right no-repeat;}
+#signup h2{
+	margin-top:0;
+	padding-top:0;
+	font-variant:small-caps;
+}
+#signup p.fieldlabel {
+	padding-top:0;
+	margin-top:0;
+	font-size:85%;
+	font-weight:bold;
+}
+
+
+/* Begin TipTip */
+/* TipTip CSS - Version 1.2 */
+/*
+#tiptip_holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+#tiptip_holder.tip_top {
+	padding-bottom: 5px;
+}
+
+#tiptip_holder.tip_bottom {
+	padding-top: 5px;
+}
+
+#tiptip_holder.tip_right {
+	padding-left: 5px;
+}
+
+#tiptip_holder.tip_left {
+	padding-right: 5px;
+}
+
+#tiptip_content {
+	font-size: 11px;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	padding: 4px 8px;
+	border: 1px solid rgba(255,255,255,0.25);
+	background-color: rgb(25,25,25);
+	background-color: rgba(25,25,25,0.92);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 0 0 3px #555;
+	-webkit-box-shadow: 0 0 3px #555;
+	-moz-box-shadow: 0 0 3px #555;
+}
+
+#tiptip_arrow, #tiptip_arrow_inner {
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
+
+#tiptip_holder.tip_top #tiptip_arrow {
+	border-top-color: #fff;
+	border-top-color: rgba(255,255,255,0.35);
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow {
+	border-bottom-color: #fff;
+	border-bottom-color: rgba(255,255,255,0.35);
+}
+
+#tiptip_holder.tip_right #tiptip_arrow {
+	border-right-color: #fff;
+	border-right-color: rgba(255,255,255,0.35);
+}
+
+#tiptip_holder.tip_left #tiptip_arrow {
+	border-left-color: #fff;
+	border-left-color: rgba(255,255,255,0.35);
+}
+
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	margin-top: -7px;
+	margin-left: -6px;
+	border-top-color: rgb(25,25,25);
+	border-top-color: rgba(25,25,25,0.92);
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	margin-top: -5px;
+	margin-left: -6px;
+	border-bottom-color: rgb(25,25,25);
+	border-bottom-color: rgba(25,25,25,0.92);
+}
+
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -5px;
+	border-right-color: rgb(25,25,25);
+	border-right-color: rgba(25,25,25,0.92);
+}
+
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -7px;
+	border-left-color: rgb(25,25,25);
+	border-left-color: rgba(25,25,25,0.92);
+}
+*/
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
+	#tiptip_content {
+		padding: 4px 8px 5px 8px;
+		background-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
+		border-bottom-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_top #tiptip_arrow_inner { 
+		border-top-color: rgba(20,20,20,0.92);
+	}
+}
+/* End TipTip */
+
+
+/* Begin jQuery UI */
+/*
+ * jQuery UI CSS Framework 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*
+ * jQuery UI CSS Framework 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS,%20Tahoma,%20Verdana,%20Arial,%20sans-serif&fwDefault=normal&fsDefault=1em&cornerRadius=4px&bgColorHeader=89030d&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=35&borderColorHeader=68030b&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=03_highlight_soft.png&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=02_glass.png&bgImgOpacityDefault=100&borderColorDefault=ccc&fcDefault=454545&iconColorDefault=89030d&bgColorHover=fdf5ce&bgTextureHover=02_glass.png&bgImgOpacityHover=100&borderColorHover=9e9e9e&fcHover=424242&iconColorHover=89030d&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=ddd&fcActive=000000&iconColorActive=89030d&bgColorHighlight=ffe45c&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=08_diagonals_thick.png&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=08_diagonals_thick.png&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=01_flat.png&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
+ */
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Helvetica, Arial, sans-serif, Tahoma, Verdana, Arial, sans-serif; }
+.ui-widget .ui-widget {  }
+.entryform .ui-widget, .entryform .ui-widget .ui-widget, .parentform .ui-widget, .parentform .ui-widget .ui-widget {font-size: 0.9em;}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Helvetica, Arial, sans-serif, Tahoma, Verdana; font-size: 1em; }
+.ui-widget-content { border: 1px solid #ccc; background: #eeeeee url(http://static.fixmyschool.net/images/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x; color: #333333; }
+.ui-widget-content a { color: #333333; }
+.ui-widget-header { border: 1px solid #68030b; background: #89030d url(http://static.fixmyschool.net/images/ui-bg_gloss-wave_35_89030d_500x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-widget-header a { color: #ffffff; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #ccc; background: #f6f6f6 url(http://static.fixmyschool.net/images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #454545; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #454545; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #9e9e9e; background: #fdf5ce url(http://static.fixmyschool.net/images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #424242; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #424242; text-decoration: none; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #ddd; background: #ffffff url(http://static.fixmyschool.net/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #000000; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #000000; text-decoration: none; }
+.ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #fed22f; background: #ffe45c url(http://static.fixmyschool.net/images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #b81900 url(http://static.fixmyschool.net/images/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat; color: #ffffff; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #ffffff; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #ffffff; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(http://static.fixmyschool.net/images/ui-icons_222222_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_222222_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_ffffff_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(http://static.fixmyschool.net/images/ui-icons_89030d_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_89030d_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_89030d_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_228ef1_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(http://static.fixmyschool.net/images/ui-icons_ffd27a_256x240.png); }
+
+/* positioning */
+/*.ui-icon-carat-1-n { background-position: 0 0; }
+.ui-icon-carat-1-ne { background-position: -16px 0; }
+.ui-icon-carat-1-e { background-position: -32px 0; }
+.ui-icon-carat-1-se { background-position: -48px 0; }
+.ui-icon-carat-1-s { background-position: -64px 0; }
+.ui-icon-carat-1-sw { background-position: -80px 0; }
+.ui-icon-carat-1-w { background-position: -96px 0; }
+.ui-icon-carat-1-nw { background-position: -112px 0; }
+.ui-icon-carat-2-n-s { background-position: -128px 0; }
+.ui-icon-carat-2-e-w { background-position: -144px 0; }
+*/
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+/*
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -64px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-off { background-position: -96px -144px; }
+.ui-icon-radio-on { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+*/
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+
+
+/* Overlays */
+.ui-widget-overlay { background: #666666 url(http://static.fixmyschool.net/images/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat; opacity: .50;filter:Alpha(Opacity=50); }
+.ui-widget-shadow { margin: -5px 0 0 -5px; padding: 5px; background: #000000 url(http://static.fixmyschool.net/images/ui-bg_flat_10_000000_40x100.png) 50% 50% repeat-x; opacity: .20;filter:Alpha(Opacity=20); -moz-border-radius: 5px; -khtml-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }/*
+ * jQuery UI Autocomplete 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete { position: absolute; cursor: default; }	
+
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.17
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+	margin:0;
+	padding: 0;
+	zoom: 1;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.2em .4em;
+	line-height:1.5;
+	zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+
+/* Autocomplete customization */
+ #signup { font-family:sans-serif; }
+	.ui-button { margin-left: -1px; }
+	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+	.ui-autocomplete-input { margin: 0; padding: 0.3em 0 0.3em 0.3em; width:250px; }
+	.ui-autocomplete {
+		max-height: 200px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;
+	}
+	/* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+	* html .ui-autocomplete {
+		height: 100px;
+	}
+	#signup input[type="text"], #signup input[type="password"],
+	#signup .ui-autocomplete-input, #signup .ui-autocomplete { font-size: 1em; }
+	#storyform .ui-autocomplete-input, #storyform .ui-autocomplete {font-size:0.9em;}
+	}
+	
+/* Dropdownchecklist customization */
+/** Simple modifications needed for DropDownCheckList to take advantage of ThemeRoller settings */
+.ui-dropdownchecklist .ui-widget-content
+, .ui-dropdownchecklist .ui-widget-header {
+	border: none;
+}
+.ui-dropdownchecklist-indent {
+	padding-left: 7px;
+}
+/* Font size of 0 on the -selector and an explicit medium on -text required to eliminate 
+   descender problems within the containers and still have a valid size for the text */
+.ui-dropdownchecklist-selector-wrapper
+, .ui-widget.ui-dropdownchecklist-selector-wrapper {
+	vertical-align: middle;
+	font-size: 0px;
+}
+.ui-dropdownchecklist-selector {
+	padding: 1px 2px 2px 2px;
+	font-size: 0px;
+	background:#efefef;
+}
+.ui-dropdownchecklist-text {
+	font-size: 12pt;
+	color:#000;
+}
+.ui-dropdownchecklist-item
+, .ui-dropdownchecklist-item input {
+    vertical-align: middle;
+}
+.ui-dropdownchecklist-group {
+	padding: 1px 2px 2px 2px;
+}
+
+
+/* End jQuery UI */
+
+/* Begin jqModal */
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+/*	
+.jqmWindow {
+    display: none;
+    
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    
+    margin-left: -300px;
+    width: 600px;
+    
+    background-color: #FDFDFD;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+    
+    
+}
+
+.jqmOverlay { background-color: #000; }
+*/
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+/** iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+*/
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+/*
+     * html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+*/
+/* End jqModal */
+
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ * 
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
+ * 
+ * Version: 1.3.4 (11/11/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+}
+
+#fancybox-loading div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 480px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+}
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1100;
+	display: none;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#fancybox-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	border: 0px solid #fff;
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
+	background: transparent url('http://static.fixmyschool.net/fancybox/fancybox.png') -40px 0px;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#fancybox-error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
+}
+
+#fancybox-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+}
+
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background: transparent url('http://static.fixmyschool.net/fancybox/blank.gif');
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible; /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancybox-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancybox-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox-x.png');
+}
+
+#fancybox-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox-y.png');
+	background-position: -20px 0px;
+}
+
+#fancybox-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -182px; 
+}
+
+#fancybox-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox-x.png');
+	background-position: 0px -20px;
+}
+
+#fancybox-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox-y.png');
+}
+
+#fancybox-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancybox.png');
+	background-position: -40px -122px;
+}
+
+#fancybox-title {
+	font-family: Helvetica;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
+}
+
+.fancybox-title-outside {
+	padding-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: url('http://static.fixmyschool.net/fancybox/fancy_title_over.png');
+	display: block;
+}
+
+.fancybox-title-float {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	height: 32px;
+}
+
+#fancybox-title-float-wrap {
+	border: none;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#fancybox-title-float-wrap td {
+	border: none;
+	white-space: nowrap;
+}
+
+#fancybox-title-float-left {
+	padding: 0 0 0 15px;
+	background: url('http://static.fixmyschool.net/fancybox/fancybox.png') -40px -90px no-repeat;
+}
+
+#fancybox-title-float-main {
+	color: #FFF;
+	line-height: 29px;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	background: url('http://static.fixmyschool.net/fancybox/fancybox-x.png') 0px -40px;
+}
+
+#fancybox-title-float-right {
+	padding: 0 0 0 15px;
+	background: url('http://static.fixmyschool.net/fancybox/fancybox.png') -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_close.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }
